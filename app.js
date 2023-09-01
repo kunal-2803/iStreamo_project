@@ -14,7 +14,8 @@ require("./db");
 const app = express();
 app.use(cookieParser());
 
-
+app.get('/',(req,res)=>{
+  res.send("Hello World")});
 app.use(bodyParser.json());
 app.use('/user', userRoutes);
 app.use('/profile', profileRoutes);
